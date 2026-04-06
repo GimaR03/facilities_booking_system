@@ -1,0 +1,97 @@
+.admin-page {
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    linear-gradient(160deg, #17354f 0%, #2f5b72 45%, #dbead8 45%, #dbead8 100%);
+}
+
+.admin-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 24px 55px rgba(7, 28, 41, 0.2);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4c6a6f;
+}
+
+.admin-header h2 {
+  margin: 4px 0 0;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: #10263f;
+}
+
+.back-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #eff4fb;
+  color: #143456;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-card {
+  border: 1px solid #d5e0ef;
+  border-radius: 14px;
+  padding: 20px;
+  background: #fdfefe;
+}
+
+.admin-card h3 {
+  margin: 0;
+  color: #143456;
+}
+
+.admin-card p {
+  margin-top: 10px;
+  color: #4a5f76;
+}
+
+.admin-card ul {
+  margin: 12px 0;
+  padding-left: 20px;
+  color: #334b63;
+}
+
+.card-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #1c4f82;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

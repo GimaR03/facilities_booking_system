@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Home from './component/home/home';
+import AAdminDashboard from './component/adminManagement/A_AdminDashboard';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const handleAdminClick = () => {
+    setCurrentPage('admin');
+  };
+
+  const handleTicketClick = () => {
+    setCurrentPage('admin');
+  };
+
+  const handleBackToHome = () => {
+    setCurrentPage('home');
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {currentPage === 'home' ? (
+        <Home onAdminClick={handleAdminClick} onTicketClick={handleTicketClick} />
+      ) : (
+        <AAdminDashboard onBack={handleBackToHome} />
+      )}
     </div>
   );
 }
